@@ -1,4 +1,4 @@
-package com.shoppinglist;
+package com.shoppinglist2;
 
 import android.app.Application;
 import android.content.Context;
