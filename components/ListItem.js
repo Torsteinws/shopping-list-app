@@ -1,12 +1,14 @@
+// Core react
 import React from "react"
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+// Third party
 import Icon from "react-native-vector-icons/FontAwesome"
 import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons"
-
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 const ListItem = (props) => {
 
+    // returns the backround display when the user swipes left
     const swipeLeftAction = () => {
         return(
             <View style={style.wipeContainer}>
@@ -18,7 +20,7 @@ const ListItem = (props) => {
             </View>
         )
     }
-
+    // returns the backround display when the user swipes right 
     const swipeRightAction = () => {
         return(
             <View style={[style.wipeContainer, style.leftSwipeContainer]}>
@@ -42,7 +44,6 @@ const ListItem = (props) => {
                 <MaterialIcon 
                     name="arrow-collapse-right" 
                     style={style.removeIcon} 
-                    // onPress={() => props.onDeleteItem(props.itemId)}
                 />
             </View>       
         </Swipeable>

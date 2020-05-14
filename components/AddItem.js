@@ -1,20 +1,19 @@
+// Core react
 import React, {useState, useRef} from "react"
-
 import {
     View, Text, TextInput, TouchableOpacity, StyleSheet, TouchableWithoutFeedback
 } from "react-native"
-
+// Third party
 import Icon from "react-native-vector-icons/Entypo"
 
 const AddItem = (props) => {
-
+    // state hooks
     const [text, setText] = useState("")
     const textInputRef = useRef(null)
 
     const onTextChanged = (text) => { 
         setText(text)
     }
-
     const AddCurrentItem = () =>{
         props.onAddItemPress(text)
         setText("")
@@ -35,16 +34,13 @@ const AddItem = (props) => {
                     style={style.addButton}
                     onPress={AddCurrentItem}
                 >
-                        <Icon name="add-to-list" style={style.buttonIcon}></Icon>
-                        <Text style={style.buttonText} >ADD ITEM</Text>
+                    <Icon name="add-to-list" style={style.buttonIcon}></Icon>
+                    <Text style={style.buttonText} >ADD ITEM</Text>
                 </TouchableOpacity>
             </View>
         </View>
     )
 }
-
-
-
 
 const style = StyleSheet.create({
 
